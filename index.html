@@ -33,6 +33,10 @@ body{
     console.log(document.referrer);
     console.log(document.location.href);
     console.log(document.location.ancestorOrigins);
+    var url = (window.location != window.parent.location) ?
+        document.referrer :
+        document.location.href;
+    console.log("url: " + url);
 </script>
 <script>console.log(document.domain)</script>
 <script>
