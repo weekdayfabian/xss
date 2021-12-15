@@ -26,9 +26,12 @@ body{
     <div id="lbl"></div>
 </body>
 
-<script>console.log(window.location != window.parent.location
-            ? document.referrer
-            : document.location.href);</script>
+<script>
+    console.log(window.parent.location);
+    console.log(document.referrer);
+    console.log(document.location.href);
+    console.log(document.location.ancestorOrigins);
+</script>
 <script>console.log(document.domain)</script>
 <script>
     var weekday = new Array(7);
