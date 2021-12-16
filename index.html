@@ -37,8 +37,22 @@ body{
         document.location.href;
     console.log("url: " + url);
 </script>
-<script>console.log(document.domain)</script>
+<!-- Matomo -->
 <script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setCookieDomain", "*.www.notion.com"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://aleo.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/aleo.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code --><script>
     var weekday = new Array(7);
     weekday[0] = "Sunday";
     weekday[1] = "Monday";
